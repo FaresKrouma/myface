@@ -62,9 +62,7 @@ const LeftBar = () => {
       </div>
       <hr />
       <div className="section">
-        <div className="title">
-          <span>Others</span>
-        </div>
+        <div className="title">Others</div>
         <div className="item">
           <img src={fundraiser} alt="" />
           <span>Fundraiser</span>
@@ -91,6 +89,11 @@ const LeftBarWrapper = styled.aside`
   padding: 15px 20px;
   border-right: 1px solid lightgrey;
   height: 100%;
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
   .item {
     display: flex;
     align-items: center;
@@ -115,11 +118,6 @@ const LeftBarWrapper = styled.aside`
       font-weight: bolder;
       font-size: 15px;
     }
-  }
-  .section {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
   }
   .title {
     color: #838383;

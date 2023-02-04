@@ -13,7 +13,7 @@ function App() {
     return (
       <div>
         <Navbar />
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <LeftBar />
           <Outlet />
           <RightBar />
