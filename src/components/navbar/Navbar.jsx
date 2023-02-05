@@ -31,11 +31,16 @@ const Navbar = () => {
 };
 export default Navbar;
 
-const NavbarWrapper = styled.div`
+const NavbarWrapper = styled.nav`
   display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
   justify-content: space-between;
   border-bottom: 1px lightgray solid;
   padding: 10px 20px;
+  overflow: hidden;
+  z-index: 5;
   .left {
     display: flex;
     align-items: center;

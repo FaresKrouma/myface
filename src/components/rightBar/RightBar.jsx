@@ -4,87 +4,151 @@ const RightBar = () => {
   return (
     <RightBarWrapper>
       <div className="section">
-        <span className="title">suggestions for you</span>
-        <div className="requests">
-          <div className="item">
+        <h4>suggestions for you</h4>
+        <div className="item">
+          <div className="user">
             <img src="" alt="" />
             <span>john doe</span>
-            <button className="follow">follow</button>
-            <button className="dismiss">dismiss</button>
           </div>
-          <div className="item">
+          <div className="buttons">
+            <button>follow</button>
+            <button>dismiss</button>
+          </div>
+        </div>
+        <div className="item">
+          <div className="user">
             <img src="" alt="" />
             <span>john doe</span>
-            <button className="follow">follow</button>
-            <button className="dismiss">dismiss</button>
+          </div>
+          <div className="buttons">
+            <button>follow</button>
+            <button>dismiss</button>
           </div>
         </div>
       </div>
       <div className="section">
-        <span className="title">latest activities</span>
-        <div className="activities">
-          <div className="item">
+        <h4>latest activities</h4>
+        <div className="item">
+          <div className="user">
             <img src="" alt="" />
-            <span>john doe</span>
-            <span>changed profile pic</span>
-            <span>5 sec ago</span>
+            <p>
+              <span> john doe </span>changed their profile pic.
+            </p>
           </div>
-          <div className="item">
+          <small>1s ago</small>
+        </div>
+        <div className="item">
+          <div className="user">
             <img src="" alt="" />
-            <span>john doe</span>
-            <span>changed profile pic</span>
-            <span>5 sec ago</span>
+            <p>
+              <span> john doe </span>changed their profile pic.
+            </p>
           </div>
-          <div className="item">
-            <img src="" alt="" />
-            <span>john doe</span>
-            <span>changed profile pic</span>
-            <span>5 sec ago</span>
-          </div>
-
-          <div className="item">
-            <img src="" alt="" />
-            <span>john doe</span>
-            <span>changed profile pic</span>
-            <span>5 sec ago</span>
-          </div>
+          <small>1s ago</small>
         </div>
       </div>
       <div className="section">
-        <span className="title">online friends</span>
-        <div className="online">
-          <div className="item">
+        <h4>online friends</h4>
+        <div className="item">
+          <div className="user">
+            <div className="online-status">.</div>
             <img src="" alt="" />
-            <span>john smith</span>
+            <span>john doe</span>
           </div>
-          <div className="item">
+        </div>
+        <div className="item">
+          <div className="user">
+            <div className="online-status">.</div>
             <img src="" alt="" />
-            <span>john smith</span>
+            <span>john doe</span>
           </div>
-          <div className="item">
+        </div>
+        <div className="item">
+          <div className="user">
+            <div className="online-status">.</div>
             <img src="" alt="" />
-            <span>john smith</span>
+            <span>john doe</span>
           </div>
         </div>
       </div>
     </RightBarWrapper>
   );
 };
+
 export default RightBar;
 
 const RightBarWrapper = styled.aside`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
+  padding: 1rem;
+  flex: 2.25;
+  position: sticky;
+  right: 0;
+  top: 50px;
+  height: calc(100vh - 50px);
   .section {
-    margin: 15px 15px 0 0;
-    padding: 10px 15px;
-    border: 1px solid gray;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
     display: flex;
+    padding: 15px;
     flex-direction: column;
-    gap: 5px;
-    .title {
-      color: #838383;
+    gap: 10px;
+    border-radius: 5px;
+    h4 {
+      color: darkgrey;
+      font-size: 14px;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .user {
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        img {
+          height: 25px;
+          width: 25px;
+          margin-right: 5px;
+          background-color: black;
+          border-radius: 50%;
+        }
+        p {
+          font-size: 10px;
+          color: #9c9c9c;
+          span {
+          }
+        }
+        span {
+          font-weight: 600;
+          letter-spacing: -0.4px;
+          color: black;
+          font-size: 14px;
+        }
+        .online-status {
+        }
+      }
+      small {
+        color: #c2c2c2;
+        font-size: 10px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 5px;
+        button {
+          font-size: 10px;
+          border: none;
+          padding: 5px;
+          border-radius: 5px;
+          :first-child {
+            background-color: #29cac5;
+          }
+          :nth-child(2) {
+            background-color: tomato;
+          }
+        }
+      }
     }
   }
 `;

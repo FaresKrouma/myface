@@ -75,6 +75,26 @@ const LeftBar = () => {
           <img src={courses} alt="" />
           <span>Courses</span>
         </div>
+        <div className="item">
+          <img src={courses} alt="" />
+          <span>Courses</span>
+        </div>
+        <div className="item">
+          <img src={courses} alt="" />
+          <span>Courses</span>
+        </div>
+        <div className="item">
+          <img src={courses} alt="" />
+          <span>Courses</span>
+        </div>
+        <div className="item">
+          <img src={courses} alt="" />
+          <span>Courses</span>
+        </div>
+        <div className="item">
+          <img src={courses} alt="" />
+          <span>Courses</span>
+        </div>
       </div>
     </LeftBarWrapper>
   );
@@ -82,17 +102,30 @@ const LeftBar = () => {
 export default LeftBar;
 
 const LeftBarWrapper = styled.aside`
-  width: 17.5%;
+  flex: 1.5;
+  position: sticky;
+  left: 0;
+  top: 50px;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding: 15px 20px;
   border-right: 1px solid lightgrey;
-  height: 100%;
+  height: calc(100vh - 50px);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .section {
     display: flex;
     flex-direction: column;
     gap: 15px;
+  }
+  hr {
+    border: none;
+    height: 0.5px;
+    background-color: lightgrey;
   }
   .item {
     display: flex;
@@ -104,7 +137,7 @@ const LeftBarWrapper = styled.aside`
       height: 22px;
     }
     span {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
   .user {
@@ -121,5 +154,6 @@ const LeftBarWrapper = styled.aside`
   }
   .title {
     color: #838383;
+    font-size: 14px;
   }
 `;

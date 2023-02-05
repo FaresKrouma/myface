@@ -11,14 +11,14 @@ import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 function App() {
   const Layout = () => {
     return (
-      <div>
+      <>
         <Navbar />
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <LeftBar />
           <Outlet />
           <RightBar />
         </div>
-      </div>
+      </>
     );
   };
 
