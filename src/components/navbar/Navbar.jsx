@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { TbMoon } from "react-icons/tb";
-import { FiMail, FiGrid, FiHome, FiSun } from "react-icons/fi";
+import { FiMail, FiGrid, FiHome } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { MdNotificationsNone } from "react-icons/md";
 import { RiSunFill } from "react-icons/ri";
@@ -53,7 +53,7 @@ const NavbarWrapper = styled.nav`
     gap: 14px;
     h3 {
       margin: 0 1rem 0 0;
-      color: tomato;
+      color: palevioletred;
     }
     input {
       padding: 7px 10px;
