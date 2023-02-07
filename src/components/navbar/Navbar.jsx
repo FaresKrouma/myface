@@ -4,13 +4,13 @@ import { FiMail, FiGrid, FiHome } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { MdNotificationsNone } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
     <NavbarWrapper>
       <div className="left">
         <h3>myface social</h3>
         <FiHome className="icon" />
-        <TbMoon className="icon" />
+        <TbMoon onClick={toggleDarkMode} className="icon" />
         <FiGrid className="icon" />
         <form>
           <input type="text" placeholder="search here..." />
@@ -39,6 +39,7 @@ const NavbarWrapper = styled.nav`
   justify-content: space-between;
   border-bottom: 1px solid ${(p) => p.theme.border};
   padding: 10px 20px;
+  transition: ease 1s;
   overflow: hidden;
   z-index: 5;
   .left {
@@ -47,7 +48,7 @@ const NavbarWrapper = styled.nav`
     gap: 14px;
     h3 {
       margin: 0 1rem 0 0;
-      color: ${(p) => p.theme.logo};
+      color: tomato;
     }
     input {
       padding: 7px 10px;

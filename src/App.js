@@ -8,13 +8,26 @@ import Profile from "./pages/profile/Profile";
 import { ThemeProvider } from "styled-components";
 
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [darkMode, setdarkMode] = useState(
+    JSON.parse(localStorage.getItem("darkMode")) || false
+  );
+
+  function toggleDarkMode() {
+    setdarkMode(!darkMode);
+  }
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
   const Layout = () => {
     return (
       <>
-        <ThemeProvider theme={theme.dark}>
-          <Navbar />
+        <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
+          <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
           <div
             style={{
               display: "flex",
@@ -61,7 +74,7 @@ const theme = {
     text: "#e1e1e1",
     backgroundSoft: "#333",
     logo: "white",
-    textSoft: "lightgray",
+    textSoft: "darkgray",
     border: "#444",
   },
   light: {
