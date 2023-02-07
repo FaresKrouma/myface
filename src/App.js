@@ -80,7 +80,7 @@ const theme = {
   light: {
     backgroundColor: "white",
     text: "black",
-    backgroundSoft: "#f6f3f3",
+    backgroundSoft: "#eee",
     logo: "tomato",
     textSoft: "#555",
     border: "lightgray",

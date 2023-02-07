@@ -153,10 +153,11 @@ const RightBarWrapper = styled.aside`
         display: flex;
         gap: 7px;
         button {
-          font-size: 12px;
+          font-size: 14px;
           border: none;
           padding: 5px;
           border-radius: 5px;
+
           :first-child {
             background-color: #29cac5;
           }

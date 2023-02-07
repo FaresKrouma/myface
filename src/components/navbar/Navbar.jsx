@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { TbMoon } from "react-icons/tb";
-import { FiMail, FiGrid, FiHome } from "react-icons/fi";
+import { FiMail, FiGrid, FiHome, FiSun } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { MdNotificationsNone } from "react-icons/md";
+import { RiSunFill } from "react-icons/ri";
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
@@ -10,7 +11,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       <div className="left">
         <h3>myface social</h3>
         <FiHome className="icon" />
-        <TbMoon onClick={toggleDarkMode} className="icon" />
+        {darkMode ? (
+          <RiSunFill onClick={toggleDarkMode} className="icon" />
+        ) : (
+          <TbMoon onClick={toggleDarkMode} className="icon" />
+        )}
         <FiGrid className="icon" />
         <form>
           <input type="text" placeholder="search here..." />
@@ -59,7 +64,7 @@ const NavbarWrapper = styled.nav`
       border: 1px ${(p) => p.theme.border} solid;
       width: 400px;
       margin-left: 6rem;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       ::placeholder {
         color: ${(p) => p.theme.textSoft};
       }
