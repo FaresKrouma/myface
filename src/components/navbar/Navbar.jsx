@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { GrHome } from "react-icons/gr";
 import { TbMoon } from "react-icons/tb";
-import { FiMail, FiGrid } from "react-icons/fi";
+import { FiMail, FiGrid, FiHome } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { MdNotificationsNone } from "react-icons/md";
 
@@ -10,7 +9,7 @@ const Navbar = () => {
     <NavbarWrapper>
       <div className="left">
         <h3>myface social</h3>
-        <GrHome className="icon" />
+        <FiHome className="icon" />
         <TbMoon className="icon" />
         <FiGrid className="icon" />
         <form>
@@ -35,9 +34,10 @@ const NavbarWrapper = styled.nav`
   display: flex;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: ${(p) => p.theme.backgroundColor};
+  color: ${(p) => p.theme.text};
   justify-content: space-between;
-  border-bottom: 1px lightgray solid;
+  border-bottom: 1px solid ${(p) => p.theme.border};
   padding: 10px 20px;
   overflow: hidden;
   z-index: 5;
@@ -47,25 +47,32 @@ const NavbarWrapper = styled.nav`
     gap: 14px;
     h3 {
       margin: 0 1rem 0 0;
-      color: #3232e0;
+      color: ${(p) => p.theme.logo};
     }
     input {
       padding: 7px 10px;
+      background-color: transparent;
+      color: ${(p) => p.theme.text};
+      font-size: 15px;
       border-radius: 5px;
-      border: 1px lightgrey solid;
+      border: 1px ${(p) => p.theme.border} solid;
       width: 400px;
       margin-left: 6rem;
+      letter-spacing: 1px;
+      ::placeholder {
+        color: ${(p) => p.theme.textSoft};
+      }
     }
   }
   .right {
-    gap: 14px;
+    gap: 20px;
     align-items: center;
     display: flex;
     .profile-thumb {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 5px;
+      gap: 10px;
       img {
         width: 30px;
         height: 30px;

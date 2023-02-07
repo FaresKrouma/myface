@@ -103,6 +103,7 @@ export default LeftBar;
 
 const LeftBarWrapper = styled.aside`
   flex: 1.5;
+  min-width: fit-content;
   position: sticky;
   left: 0;
   top: 50px;
@@ -110,8 +111,10 @@ const LeftBarWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  background-color: ${(p) => p.theme.backgroundColor};
+  color: ${(p) => p.theme.text};
+  border-right: 1px solid ${(p) => p.theme.border};
   padding: 15px 20px;
-  border-right: 1px solid lightgrey;
   height: calc(100vh - 50px);
   overflow: scroll;
   &::-webkit-scrollbar {
@@ -125,7 +128,7 @@ const LeftBarWrapper = styled.aside`
   hr {
     border: none;
     height: 0.5px;
-    background-color: lightgrey;
+    background-color: ${(p) => p.theme.border};
   }
   .item {
     display: flex;
@@ -153,7 +156,7 @@ const LeftBarWrapper = styled.aside`
     }
   }
   .title {
-    color: #838383;
+    color: ${(p) => p.theme.textSoft};
     font-size: 14px;
   }
 `;
