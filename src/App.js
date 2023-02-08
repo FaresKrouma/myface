@@ -6,7 +6,6 @@ import LeftBar from "./components/leftBar/LeftBar";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import { ThemeProvider } from "styled-components";
-
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -16,7 +15,7 @@ function App() {
   );
 
   function toggleDarkMode() {
-    setdarkMode(!darkMode);
+    setdarkMode((prevDarkMode) => !prevDarkMode);
   }
 
   useEffect(() => {

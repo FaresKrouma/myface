@@ -4,6 +4,7 @@ import { FiMail, FiGrid, FiHome } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { MdNotificationsNone } from "react-icons/md";
 import { RiSunFill } from "react-icons/ri";
+import pp from "../../assets/pp.jpeg";
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
@@ -26,7 +27,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <FiMail className="icon" />
         <MdNotificationsNone className="icon" />
         <div className="profile-thumb">
-          <img src="" alt="profile pic" />
+          <img src={pp} alt="profile pic" />
           <span>John Doe</span>
         </div>
       </div>

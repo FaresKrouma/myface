@@ -12,13 +12,14 @@ import messages from "../../assets/10.png";
 import fundraiser from "../../assets/11.png";
 import tutorials from "../../assets/12.png";
 import courses from "../../assets/13.png";
+import pp from "../../assets/pp.jpeg";
 
 const LeftBar = () => {
   return (
     <LeftBarWrapper>
       <div className="section">
         <div className="user item">
-          <img src="" alt="" /> <span> john doe</span>
+          <img src={pp} alt="" /> <span> john doe</span>
         </div>
         <div className="item">
           <img src={friends} alt="" /> <span> Friends</span>
@@ -149,6 +150,7 @@ const LeftBarWrapper = styled.aside`
       background-color: black;
       height: 30px;
       width: 30px;
+      object-fit: cover;
     }
     span {
       font-weight: bolder;

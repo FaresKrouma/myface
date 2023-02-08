@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import pp from "../../assets/pp.jpeg";
 
 const RightBar = () => {
   return (
@@ -7,7 +8,7 @@ const RightBar = () => {
         <h4>suggestions for you</h4>
         <div className="item">
           <div className="user">
-            <img src="" alt="" />
+            <img src={pp} alt="" />
             <span>john doe</span>
           </div>
           <div className="buttons">
@@ -17,7 +18,7 @@ const RightBar = () => {
         </div>
         <div className="item">
           <div className="user">
-            <img src="" alt="" />
+            <img src={pp} alt="" />
             <span>john doe</span>
           </div>
           <div className="buttons">
@@ -30,7 +31,7 @@ const RightBar = () => {
         <h4>latest activities</h4>
         <div className="item">
           <div className="user">
-            <img src="" alt="" />
+            <img src={pp} alt="" />
             <p>
               <span> john doe </span>changed their profile pic.
             </p>
@@ -39,7 +40,7 @@ const RightBar = () => {
         </div>
         <div className="item">
           <div className="user">
-            <img src="" alt="" />
+            <img src={pp} alt="" />
             <p>
               <span> john doe </span>changed their profile pic.
             </p>
@@ -51,19 +52,19 @@ const RightBar = () => {
         <h4>online friends</h4>
         <div className="item">
           <div className="user online">
-            <img src="" alt="" />
+            <img src={pp} alt="" />
             <span>john doe</span>
           </div>
         </div>
         <div className="item ">
           <div className="user online">
-            <img src="" alt="" />
+            <img src={pp} alt="" />
             <span>john doe</span>
           </div>
         </div>
         <div className="item ">
           <div className="user online">
-            <img src="" alt="" />
+            <img src={pp} alt="" />
             <span>john doe</span>
           </div>
         </div>

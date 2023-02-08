@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import pp from "../../assets/pp.jpeg";
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       </div>
       <div className="feed">
         <div className="user">
-          <img src="" alt="" />
+          <img src={pp} alt="" />
           <div className="details">
             <span>John Doe</span>
             <small>3s ago</small>
@@ -20,7 +21,7 @@ const Home = () => {
           <button>...</button>
         </div>
         <p>i enjoyed the trip with the guyz</p>
-        <img src="" alt="" />
+        <img src={pp} alt="" />
       </div>
       <div>home</div>
       <div>home</div>
@@ -97,9 +98,10 @@ const HomeWrapper = styled.main`
       display: flex;
       align-items: center;
       img {
-        height: 25px;
-        width: 25px;
-        background-color: black;
+        height: 40px;
+        width: 40px;
+        /* background-color: black; */
+        object-fit: cover;
         border-radius: 50%;
       }
       .details {
@@ -125,6 +127,8 @@ const HomeWrapper = styled.main`
       width: 100%;
       background-color: black;
       height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
     }
   }
 `;
