@@ -12,14 +12,17 @@ import messages from "../../assets/10.png";
 import fundraiser from "../../assets/11.png";
 import tutorials from "../../assets/12.png";
 import courses from "../../assets/13.png";
-import pp from "../../assets/pp.jpeg";
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 
 const LeftBar = () => {
+  const { currentUser } = useContext(AuthContext);
   return (
     <LeftBarWrapper>
       <div className="section">
         <div className="user item">
-          <img src={pp} alt="" /> <span> john doe</span>
+          <img src={currentUser.img.pp} alt="" />{" "}
+          <span> {currentUser.name}</span>
         </div>
         <div className="item">
           <img src={friends} alt="" /> <span> Friends</span>

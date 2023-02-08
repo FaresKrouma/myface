@@ -6,12 +6,20 @@ import LeftBar from "./components/leftBar/LeftBar";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import { ThemeProvider } from "styled-components";
-import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { AuthContext } from "./context/authContext";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
+  const { currentUser } = useContext(AuthContext);
+
   const Layout = () => {
     return (
       <>
@@ -33,10 +41,19 @@ function App() {
     );
   };
 
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) return <Navigate to="/login" />;
+    return children;
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           path: "/",

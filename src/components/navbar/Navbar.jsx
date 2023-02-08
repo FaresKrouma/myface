@@ -7,10 +7,11 @@ import { FiMail, FiGrid, FiHome } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { MdNotificationsNone } from "react-icons/md";
 import { RiSunFill } from "react-icons/ri";
-import pp from "../../assets/pp.jpeg";
+import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <NavbarWrapper>
@@ -32,8 +33,8 @@ const Navbar = () => {
         <FiMail className="icon" />
         <MdNotificationsNone className="icon" />
         <div className="profile-thumb">
-          <img src={pp} alt="profile pic" />
-          <span>John Doe</span>
+          <img src={currentUser.img.pp} alt="profile pic" />
+          <span>{currentUser.name}</span>
         </div>
       </div>
     </NavbarWrapper>

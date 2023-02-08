@@ -1,13 +1,21 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { AuthContext } from "../../context/authContext";
 import image from "./kelsey-chance-CutTQTt2HyI-unsplash.jpg";
 
 const Login = () => {
+  const { login } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    login();
+  };
+
   return (
     <LoginPage>
       <div className="card">
         <div className="left">
-          <h2>Hello World !</h2>
+          <h2>Hello World!</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             ratione vel neque esse earum reprehenderit error dolor eveniet
@@ -25,7 +33,9 @@ const Login = () => {
           <form action="">
             <input type="text" placeholder="username" id="" />
             <input type="text" placeholder="password" id="" />
-            <button>Login</button>
+            <Link to="/">
+              <button onClick={handleLogin}>Login</button>
+            </Link>
           </form>
         </div>
       </div>
@@ -64,7 +74,6 @@ const LoginPage = styled.div`
       gap: 35px;
       justify-content: center;
       h2 {
-        /* line-height: 1; */
         font-size: 4rem;
       }
       p {
