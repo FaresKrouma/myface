@@ -7,26 +7,16 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import { ThemeProvider } from "styled-components";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
-  const [darkMode, setdarkMode] = useState(
-    JSON.parse(localStorage.getItem("darkMode")) || false
-  );
-
-  function toggleDarkMode() {
-    setdarkMode((prevDarkMode) => !prevDarkMode);
-  }
-
-  useEffect(() => {
-    localStorage.setItem("darkMode", darkMode);
-  }, [darkMode]);
-
+  const { darkMode } = useContext(DarkModeContext);
   const Layout = () => {
     return (
       <>
         <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
-          <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+          <Navbar />
           <div
             style={{
               display: "flex",

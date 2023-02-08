@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
+
 import styled from "styled-components";
 import { TbMoon } from "react-icons/tb";
 import { FiMail, FiGrid, FiHome } from "react-icons/fi";
@@ -6,7 +9,9 @@ import { MdNotificationsNone } from "react-icons/md";
 import { RiSunFill } from "react-icons/ri";
 import pp from "../../assets/pp.jpeg";
 
-const Navbar = ({ darkMode, toggleDarkMode }) => {
+const Navbar = () => {
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+
   return (
     <NavbarWrapper>
       <div className="left">
