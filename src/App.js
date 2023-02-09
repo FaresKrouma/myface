@@ -91,6 +91,6 @@ const theme = {
     logo: "tomato",
     textSoft: "#555",
     border: "lightgray",
-    shadow: "#00000011",
+    shadow: "#bfbfbf5a",
   },
 };
