@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import pp from "../../assets/pp.jpeg";
-import { BsChatLeftText } from "react-icons/bs";
+import { BsChatLeftText, BsThreeDots } from "react-icons/bs";
 import { RiShareLine } from "react-icons/ri";
 import { FcLike } from "react-icons/fc";
 import { RiHeart3Line } from "react-icons/ri";
 
 const Post = () => {
+  const liked = true;
   return (
     <PostWrapper>
       <div className="user">
@@ -14,7 +15,7 @@ const Post = () => {
           <span>John Doe</span>
           <small>3s ago</small>
         </div>
-        <button>...</button>
+        <BsThreeDots className="icon" />
       </div>
       <div className="content">
         <p>i enjoyed the trip with the guyz</p>
@@ -22,8 +23,11 @@ const Post = () => {
       </div>
       <div className="interactions">
         <span>
-          {/* <RiHeart3Line className="icon" /> */}
-          <FcLike className="icon" />
+          {liked ? (
+            <RiHeart3Line className="icon" />
+          ) : (
+            <FcLike className="icon" />
+          )}
           Like
         </span>
         <span>
@@ -52,6 +56,7 @@ const PostWrapper = styled.div`
   padding: 15px;
   .user {
     gap: 10px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
     img {
@@ -67,15 +72,13 @@ const PostWrapper = styled.div`
       span {
       }
       small {
-        /* padding-left: 4px; */
         color: ${(p) => p.theme.textSoft};
         font-size: 10px;
-        /* align-self: center; */
       }
     }
-    button {
+    .icon {
       margin-left: auto;
-      border: none;
+      font-size: 25px;
     }
   }
   .content {
@@ -84,11 +87,11 @@ const PostWrapper = styled.div`
     gap: 10px;
 
     p {
-      padding: 0 5px;
+      padding: 0 10px;
     }
     img {
       width: 100%;
-      background-color: black;
+      background-color: #f2f2f2;
       height: 500px;
       object-fit: cover;
       border-radius: 10px;
@@ -102,6 +105,7 @@ const PostWrapper = styled.div`
       display: flex;
       align-items: center;
       gap: 5px;
+      font-size: 12px;
       .icon {
         font-size: 20px;
       }

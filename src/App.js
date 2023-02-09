@@ -84,9 +84,9 @@ const theme = {
     border: "#444",
   },
   light: {
-    backgroundColor: "white",
+    backgroundColor: "#f1f1f1",
     text: "black",
-    backgroundSoft: "#eee",
+    backgroundSoft: "#dfdfdf",
     logo: "tomato",
     textSoft: "#555",
     border: "lightgray",
