@@ -54,6 +54,8 @@ const PostWrapper = styled.div`
   flex-direction: column;
   gap: 15px;
   padding: 15px;
+  box-shadow: 0 0 10px 2px ${(p) => p.theme.shadow};
+
   .user {
     gap: 10px;
     padding: 0 10px;

@@ -89,7 +89,7 @@ const RightBarWrapper = styled.aside`
   /* color: ${(p) => p.theme.text}; */
 
   .section {
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 10px 2px ${(p) => p.theme.shadow};
     display: flex;
     padding: 15px;
     flex-direction: column;

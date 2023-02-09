@@ -82,6 +82,7 @@ const theme = {
     logo: "white",
     textSoft: "darkgray",
     border: "#444",
+    shadow: "#ffbaba2c",
   },
   light: {
     backgroundColor: "#f1f1f1",
@@ -90,5 +91,6 @@ const theme = {
     logo: "tomato",
     textSoft: "#555",
     border: "lightgray",
+    shadow: "#00000011",
   },
 };

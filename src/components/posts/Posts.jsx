@@ -17,5 +17,5 @@ const PostsWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 3rem;
 `;
