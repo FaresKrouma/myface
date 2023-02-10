@@ -16,7 +16,7 @@ const Post = () => {
         <img src={pp} alt="" />
         <div className="details">
           <span>John Doe</span>
-          <small>3s ago</small>
+          <small>3s ago.</small>
         </div>
         <BsThreeDots className="icon" />
       </div>
@@ -63,12 +63,12 @@ const PostWrapper = styled.div`
   gap: 15px;
   padding: 15px;
   box-shadow: 0 0 10px 2px ${(p) => p.theme.shadow};
-
   .user {
     gap: 10px;
     padding: 0 10px;
     display: flex;
     align-items: center;
+    font-weight: bold;
     img {
       height: 40px;
       width: 40px;
@@ -89,6 +89,7 @@ const PostWrapper = styled.div`
     .icon {
       margin-left: auto;
       font-size: 25px;
+      cursor: pointer;
     }
   }
   .content {
@@ -98,6 +99,7 @@ const PostWrapper = styled.div`
 
     p {
       padding: 0 10px;
+      font-size: 14px;
     }
     img {
       width: 100%;
