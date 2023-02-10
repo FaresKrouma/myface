@@ -76,7 +76,7 @@ const CommentsWrapper = styled.div`
       gap: 3px;
       .username {
         font-weight: bold;
-        font-size: 17px;
+        font-size: 15px;
       }
       .comment-body {
         font-size: 13px;

@@ -46,6 +46,12 @@ const Post = () => {
           Share
         </span>
       </div>
+      <div className="write-comment">
+        <img src="" alt="" />
+        <input placeholder="Write a comment here..." type="text" />
+        <button>Post</button>
+      </div>
+
       {showComments && <Comments />}
     </PostWrapper>
   );
@@ -122,6 +128,35 @@ const PostWrapper = styled.div`
       .icon {
         font-size: 20px;
       }
+    }
+  }
+  .write-comment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    img {
+      height: 30px;
+      width: 30px;
+      background-color: black;
+      object-fit: cover;
+      border-radius: 50%;
+      flex: initial;
+    }
+    input {
+      padding: 8px 10px;
+      flex: 5;
+      border: 1px solid ${(p) => p.theme.border};
+      border-radius: 5px;
+    }
+    button {
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 5px;
+      background-color: #29cac5;
     }
   }
 `;
