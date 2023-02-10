@@ -19,29 +19,19 @@ const Comments = () => {
             aut ut quis consequatur deserunt delectus animi praesentium tempora.
             Minus, quaerat. Quaerat?
           </div>
+          <small>4 Months Ago</small>
         </div>
-        <small>12 hrs ago</small>
       </div>
       <div className="comment">
         <img src={pp} alt="" />
         <div className="details">
           <div className="username">jane doe</div>
           <div className="comment-body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ad
-            sint neque odit corrupti? Quisquam adipisci perferendis
-            necessitatibus ad facilis ipsum! Enim iure dolorum sunt modi
-            nesciunt accusamus earum, quam facilis illo nihil inventore eius
-            adipisci autem animi odit sapiente fuga quis, consequatur eveniet
-            aliquid, itaque qui at quasi quidem? Quo quisquam, nesciunt quos
-            eaque nihil, similique voluptatem nulla totam nostrum excepturi
-            impedit fuga. Est, reiciendis voluptatem veniam maiores iusto
-            ducimus quaerat hic alias, blanditiis perspiciatis modi soluta eos.
-            Iste odit maxime ipsa quos asperiores deserunt optio minima quasi
-            placeat tenetur, nihil maiores hic ea blanditiis necessitatibus
-            quaerat veritatis odio!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+            cumque.
           </div>
+          <small>1s ago</small>
         </div>
-        <small>1s ago</small>
       </div>
 
       <div className="comment">
@@ -49,14 +39,12 @@ const Comments = () => {
         <div className="details">
           <div className="username">jane doe</div>
           <div className="comment-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            suscipit quas obcaecati quibusdam fugiat. Ipsum veniam ut voluptates
-            natus modi incidunt qui iusto aut aperiam laboriosam dignissimos
-            expedita voluptatibus, provident animi quasi commodi nobis
-            veritatis, atque adipisci dolor autem non.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+            consequuntur, repellendus id eaque neque sunt sed. Qui, quis
+            cupiditate! Quos sunt voluptas animi ratione explicabo!
           </div>
+          <small>12 hours ago</small>
         </div>
-        <small>12 hours ago</small>
       </div>
     </CommentsWrapper>
   );
@@ -71,18 +59,18 @@ const CommentsWrapper = styled.div`
   margin: 5px 0;
   .comment {
     display: flex;
+    color: ${(p) => p.theme.text};
     gap: 15px;
     img {
       height: 30px;
-      /* flex: 1; */
+      flex: initial;
       width: 30px;
       background-color: black;
       border-radius: 50%;
       object-fit: cover;
     }
     .details {
-      /* flex: 15; */
-
+      flex: 10;
       display: flex;
       flex-direction: column;
       gap: 3px;
@@ -94,15 +82,13 @@ const CommentsWrapper = styled.div`
         font-size: 13px;
         /* font-weight: 100; */
       }
-    }
-    small {
-      font-size: 10px;
-      align-self: center;
-      justify-self: flex-end;
-      margin-right: auto;
-      line-height: 1;
-      color: ${(p) => p.theme.textSoft};
-      text-align: center;
+      small {
+        font-size: 8px;
+        /* align-self: center; */
+        /* margin-left: auto; */
+        color: ${(p) => p.theme.textSoft};
+        /* text-align: center; */
+      }
     }
   }
 `;
