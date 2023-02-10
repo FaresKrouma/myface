@@ -4,8 +4,11 @@ import { BsChatLeftText, BsThreeDots } from "react-icons/bs";
 import { RiShareLine } from "react-icons/ri";
 import { FcLike } from "react-icons/fc";
 import { RiHeart3Line } from "react-icons/ri";
+import { useState } from "react";
+import Comments from "../comments/Comments";
 
 const Post = () => {
+  const [showComments, setShowComments] = useState(false);
   const liked = true;
   return (
     <PostWrapper>
@@ -28,17 +31,22 @@ const Post = () => {
           ) : (
             <FcLike className="icon" />
           )}
-          Like
+          10 Like
         </span>
-        <span>
+        <span
+          onClick={() => {
+            setShowComments((prev) => !prev);
+          }}
+        >
           <BsChatLeftText className="icon" />
-          Comment
+          12 Comments
         </span>
         <span>
           <RiShareLine className="icon" />
           Share
         </span>
       </div>
+      {showComments && <Comments />}
     </PostWrapper>
   );
 };
@@ -105,6 +113,7 @@ const PostWrapper = styled.div`
     padding: 0 10px;
     span {
       display: flex;
+      cursor: pointer;
       align-items: center;
       gap: 5px;
       font-size: 12px;
