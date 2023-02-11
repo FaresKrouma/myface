@@ -83,10 +83,13 @@ const PersonalInfoWrapper = styled.div`
     box-shadow: 0 0 10px 2px ${(p) => p.theme.shadow};
     .username {
       h2 {
+        font-size: 1.25rem;
         display: inline;
       }
     }
     .location-container {
+      font-size: 12px;
+      font-weight: 400;
       margin-right: 1rem;
       span {
         margin: 0 5px;
@@ -122,6 +125,7 @@ const PersonalInfoWrapper = styled.div`
         font-weight: bold;
         padding: 5px 15px;
         border-radius: 5px;
+        color: black;
         :first-child {
           background-color: #29cac5;
         }

@@ -9,7 +9,7 @@ import Comments from "../comments/Comments";
 
 const Post = () => {
   const [showComments, setShowComments] = useState(() => false);
-  const liked = true;
+  const liked = false;
   return (
     <PostWrapper>
       <div className="user">
@@ -27,9 +27,9 @@ const Post = () => {
       <div className="interactions">
         <span>
           {liked ? (
-            <RiHeart3Line className="icon" />
-          ) : (
             <FcLike className="icon" />
+          ) : (
+            <RiHeart3Line className="icon" />
           )}
           10 Like
         </span>
@@ -86,6 +86,7 @@ const PostWrapper = styled.div`
       display: flex;
       flex-direction: column;
       span {
+        font-size: 14px;
       }
       small {
         color: ${(p) => p.theme.textSoft};
@@ -102,10 +103,9 @@ const PostWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     p {
       padding: 0 10px;
-      font-size: 14px;
+      font-size: 12px;
     }
     img {
       width: 100%;
