@@ -74,7 +74,6 @@ const PostWrapper = styled.div`
     padding: 0 10px;
     display: flex;
     align-items: center;
-    font-weight: bold;
     img {
       height: 40px;
       width: 40px;
@@ -86,6 +85,7 @@ const PostWrapper = styled.div`
       display: flex;
       flex-direction: column;
       span {
+        font-weight: bold;
         font-size: 14px;
       }
       small {

@@ -75,7 +75,7 @@ const PersonalInfoWrapper = styled.div`
     text-align: center;
     width: 90%;
     border-radius: 20px;
-    padding: 65px 0 20px 0;
+    padding: 60px 0 20px 0;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -83,7 +83,8 @@ const PersonalInfoWrapper = styled.div`
     box-shadow: 0 0 10px 2px ${(p) => p.theme.shadow};
     .username {
       h2 {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        font-weight: bold;
         display: inline;
       }
     }
