@@ -157,6 +157,7 @@ const PostWrapper = styled.div`
       padding: 8px 10px;
       border-radius: 5px;
       background-color: #29cac5;
+      color: black;
     }
   }
 `;

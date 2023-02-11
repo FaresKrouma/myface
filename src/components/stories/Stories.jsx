@@ -5,47 +5,47 @@ const Stories = () => {
     <StoriesWrapper>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
       <div className="story">
         <img src="" alt="" />
-        <span>story1</span>
+        <span>here</span>
       </div>
     </StoriesWrapper>
   );
@@ -59,6 +59,7 @@ const StoriesWrapper = styled.div`
   overflow: auto;
   width: 100%;
   border-radius: 15px;
+  margin-bottom: 5px;
   ::-webkit-scrollbar {
     background: transparent;
     height: 5px;
@@ -77,17 +78,17 @@ const StoriesWrapper = styled.div`
     min-width: 110px;
     object-fit: cover;
     color: white;
-    border-radius: 12px;
     background-color: black;
+    border-radius: 12px;
     margin: 5px 0;
-    @media ${(p) => p.theme.media.mobile} {
-      height: 75px;
-      min-width: 75px;
-      border-radius: 50%;
-    }
     @media ${(p) => p.theme.media.ipad} {
       height: 140px;
       min-width: 110px;
+    }
+    @media ${(p) => p.theme.media.mobile} {
+      height: 50px;
+      min-width: 50px;
+      border-radius: 50%;
     }
   }
 `;

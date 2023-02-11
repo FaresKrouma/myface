@@ -51,7 +51,7 @@ const HomeWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
   padding: 15px 20px;
   background-color: ${(p) => p.theme.backgroundSoft};
   overflow: hidden;

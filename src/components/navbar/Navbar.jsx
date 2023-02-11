@@ -106,8 +106,17 @@ const NavbarWrapper = styled.nav`
     font-size: 20px;
     cursor: pointer;
   }
+  @media ${(p) => p.theme.media.ipad} {
+    .left {
+      form {
+        input {
+          width: 200px;
+        }
+      }
+    }
+  }
   @media ${(p) => p.theme.media.mobile} {
-    padding: 7px;
+    padding: 15px 7px;
     .left {
       h3 {
         display: none;
@@ -115,15 +124,6 @@ const NavbarWrapper = styled.nav`
       form {
         input {
           display: none;
-        }
-      }
-    }
-  }
-  @media ${(p) => p.theme.media.ipad} {
-    .left {
-      form {
-        input {
-          width: 200px;
         }
       }
     }
