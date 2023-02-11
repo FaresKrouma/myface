@@ -87,8 +87,8 @@ const NavbarWrapper = styled.nav`
     .profile-thumb {
       display: flex;
       justify-content: center;
+      justify-self: flex-end;
       align-items: center;
-      gap: 10px;
       img {
         width: 30px;
         height: 30px;
@@ -97,8 +97,11 @@ const NavbarWrapper = styled.nav`
         background-color: black;
       }
       span {
+        margin: 0 0 0 5px;
+        line-height: 1;
         font-weight: bold;
         font-size: 14px;
+        text-align: center;
       }
     }
   }
