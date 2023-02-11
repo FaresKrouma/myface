@@ -76,10 +76,10 @@ const CommentsWrapper = styled.div`
       gap: 3px;
       .username {
         font-weight: bold;
-        font-size: 15px;
+        font-size: 12px;
       }
       .comment-body {
-        font-size: 13px;
+        font-size: 12px;
         /* font-weight: 100; */
       }
       small {

@@ -90,7 +90,7 @@ const PostWrapper = styled.div`
       }
       small {
         color: ${(p) => p.theme.textSoft};
-        font-size: 10px;
+        font-size: 8px;
       }
     }
     .icon {
