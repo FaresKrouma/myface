@@ -1,3 +1,10 @@
+#root "./"
+#loginPage ./login
+#registerPage /register
+#profilePage /profile
+
+existing data need be dynamicaly fetched once the backend app is ready.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
