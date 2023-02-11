@@ -13,31 +13,31 @@ import {
   Navigate,
 } from "react-router-dom";
 import { useContext } from "react";
-import { DarkModeContext } from "./context/darkModeContext";
+import { DarkModeContextProvider } from "./context/darkModeContext";
 import { AuthContext } from "./context/authContext";
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
-
   const Layout = () => {
     return (
-      <>
-        <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
-          <Navbar />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              // flexWrap: "nowrap",
-            }}
-          >
-            <LeftBar />
-            <Outlet />
-            <RightBar />
-          </div>
-        </ThemeProvider>
-      </>
+      <DarkModeContextProvider>
+        {(darkMode) => (
+          <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
+            <Navbar />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                // flexWrap: "nowrap",
+              }}
+            >
+              <LeftBar />
+              <Outlet />
+              <RightBar />
+            </div>
+          </ThemeProvider>
+        )}
+      </DarkModeContextProvider>
     );
   };
 

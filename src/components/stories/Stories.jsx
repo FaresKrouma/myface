@@ -86,8 +86,8 @@ const StoriesWrapper = styled.div`
       min-width: 110px;
     }
     @media ${(p) => p.theme.media.mobile} {
-      height: 50px;
-      min-width: 50px;
+      height: 60px;
+      min-width: 60px;
       border-radius: 50%;
     }
   }

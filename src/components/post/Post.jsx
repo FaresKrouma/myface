@@ -8,7 +8,7 @@ import { useState } from "react";
 import Comments from "../comments/Comments";
 
 const Post = () => {
-  const [showComments, setShowComments] = useState(false);
+  const [showComments, setShowComments] = useState(() => false);
   const liked = true;
   return (
     <PostWrapper>

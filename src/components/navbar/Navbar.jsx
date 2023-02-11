@@ -51,7 +51,6 @@ const NavbarWrapper = styled.nav`
   justify-content: space-between;
   border-bottom: 1px solid ${(p) => p.theme.border};
   padding: 10px 20px;
-  transition: ease 1s;
   overflow: hidden;
   z-index: 5;
   .left {
