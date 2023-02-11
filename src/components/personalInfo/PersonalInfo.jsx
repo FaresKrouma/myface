@@ -123,7 +123,7 @@ const PersonalInfoWrapper = styled.div`
         margin: 0 10px;
         border: none;
         font-weight: bold;
-        padding: 5px 15px;
+        padding: 8px 15px;
         border-radius: 5px;
         color: black;
         :first-child {

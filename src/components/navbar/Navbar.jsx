@@ -98,6 +98,7 @@ const NavbarWrapper = styled.nav`
       }
       span {
         font-weight: bold;
+        font-size: 14px;
       }
     }
   }
