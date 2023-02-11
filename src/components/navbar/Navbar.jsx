@@ -62,18 +62,22 @@ const NavbarWrapper = styled.nav`
       margin: 0 1rem 0 0;
       color: palevioletred;
     }
-    input {
-      padding: 7px 10px;
-      background-color: transparent;
-      color: ${(p) => p.theme.text};
-      font-size: 15px;
-      border-radius: 5px;
-      border: 1px ${(p) => p.theme.border} solid;
-      width: 400px;
-      margin-left: 6rem;
-      letter-spacing: 0.8px;
-      ::placeholder {
-        color: ${(p) => p.theme.textSoft};
+    form {
+      padding: 0;
+      margin: 0 1rem;
+      input {
+        padding: 7px 10px;
+        margin: 0 auto;
+        background-color: transparent;
+        color: ${(p) => p.theme.text};
+        font-size: 15px;
+        border-radius: 5px;
+        border: 1px ${(p) => p.theme.border} solid;
+        width: 400px;
+        letter-spacing: 0.8px;
+        ::placeholder {
+          color: ${(p) => p.theme.textSoft};
+        }
       }
     }
   }
@@ -101,5 +105,27 @@ const NavbarWrapper = styled.nav`
   .icon {
     font-size: 20px;
     cursor: pointer;
+  }
+  @media ${(p) => p.theme.media.mobile} {
+    padding: 7px;
+    .left {
+      h3 {
+        display: none;
+      }
+      form {
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+  @media ${(p) => p.theme.media.ipad} {
+    .left {
+      form {
+        input {
+          width: 200px;
+        }
+      }
+    }
   }
 `;

@@ -86,7 +86,9 @@ const RightBarWrapper = styled.aside`
   top: 50px;
   height: calc(100vh - 50px);
   background-color: ${(p) => p.theme.backgroundSoft};
-  /* color: ${(p) => p.theme.text}; */
+  @media ${(p) => p.theme.media.ipad} {
+    display: none;
+  }
 
   .section {
     box-shadow: 0 0 10px 2px ${(p) => p.theme.shadow};
@@ -154,7 +156,7 @@ const RightBarWrapper = styled.aside`
         display: flex;
         gap: 7px;
         button {
-          font-size: 13px;
+          font-size: 10px;
           cursor: pointer;
           border: none;
           padding: 5px 8px;
@@ -165,6 +167,11 @@ const RightBarWrapper = styled.aside`
           }
           :nth-child(2) {
             background-color: tomato;
+          }
+        }
+        @media ${(p) => p.theme.media.laptop} {
+          button {
+            font-size: 10px;
           }
         }
       }

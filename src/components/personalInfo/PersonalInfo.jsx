@@ -23,10 +23,10 @@ const PersonalInfo = () => {
           <span>Dota2</span>
         </div>
         <div className="links-container">
-          <BsInstagram className="icon" />
-          <BsFacebook className="icon" />
-          <BsTwitter className="icon" />
-          <BsLinkedin className="icon" />
+          <BsInstagram className="icon inst" />
+          <BsFacebook className="icon fb" />
+          <BsTwitter className="icon twitter" />
+          <BsLinkedin className="icon li" />
         </div>
         <div className="buttons-container">
           <button>Follow</button>
@@ -87,6 +87,7 @@ const PersonalInfoWrapper = styled.div`
       }
     }
     .location-container {
+      margin-right: 1rem;
       span {
         margin: 0 5px;
         .icon {
@@ -97,8 +98,21 @@ const PersonalInfoWrapper = styled.div`
     .links-container {
       margin: 10px 0;
       .icon {
-        margin: 0 10px;
-        font-size: 20px;
+        margin: 0 8px;
+        font-size: 30px;
+        transition: 0.15s ease;
+        &.inst:hover {
+          color: #ff491c;
+        }
+        &.fb:hover {
+          color: #4267b2;
+        }
+        &.twitter:hover {
+          color: #fabb32;
+        }
+        &.li:hover {
+          color: #0ca9f2;
+        }
       }
     }
     .buttons-container {

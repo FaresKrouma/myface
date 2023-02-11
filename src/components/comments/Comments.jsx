@@ -55,7 +55,7 @@ const CommentsWrapper = styled.div`
   display: flex;
   color: ${(p) => p.theme.text};
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   margin: 5px 0;
   .comment {
     display: flex;

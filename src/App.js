@@ -83,6 +83,13 @@ const theme = {
     textSoft: "darkgray",
     border: "#444",
     shadow: "#ffbaba2c",
+    media: {
+      tv: "screen and (min-width: 1202px)",
+      desktop: "screen and (max-width: 1201px)",
+      laptop: "screen and (max-width: 1025px)",
+      ipad: "screen and (max-width: 961px)",
+      mobile: "screen and (max-width: 481px)",
+    },
   },
   light: {
     backgroundColor: "#f1f1f1",
@@ -92,5 +99,12 @@ const theme = {
     textSoft: "#555",
     border: "lightgray",
     shadow: "#bfbfbf5a",
+    media: {
+      tv: "screen and (min-width: 1202px)",
+      desktop: "screen and (max-width: 1201px)",
+      laptop: "screen and (max-width: 1025px)",
+      ipad: "screen and (max-width: 961px)",
+      mobile: "screen and (max-width: 481px)",
+    },
   },
 };

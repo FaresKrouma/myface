@@ -52,6 +52,10 @@ const HomeWrapper = styled.main`
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   background-color: ${(p) => p.theme.backgroundSoft};
+  overflow: hidden;
+  @media ${(p) => p.theme.media.ipad} {
+    padding: 15px 10px;
+  }
 `;

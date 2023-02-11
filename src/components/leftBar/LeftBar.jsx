@@ -121,9 +121,10 @@ const LeftBarWrapper = styled.aside`
   padding: 15px 20px;
   height: calc(100vh - 50px);
   overflow: scroll;
-  &::-webkit-scrollbar {
+  @media ${(p) => p.theme.media.mobile} {
     display: none;
   }
+
   .section {
     display: flex;
     flex-direction: column;
