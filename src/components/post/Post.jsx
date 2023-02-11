@@ -125,6 +125,9 @@ const PostWrapper = styled.div`
       align-items: center;
       gap: 5px;
       font-size: 12px;
+      @media ${(p) => p.theme.media.mobile} {
+        font-size: 10px;
+      }
       .icon {
         font-size: 20px;
       }
