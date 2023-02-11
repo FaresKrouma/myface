@@ -74,9 +74,9 @@ const PersonalInfoWrapper = styled.div`
     background-color: ${(p) => p.theme.backgroundColor};
     text-align: center;
     width: 90%;
-    margin-top: 75px;
     border-radius: 20px;
-    padding: 20px 0;
+    padding: 65px 0 20px 0;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -97,7 +97,7 @@ const PersonalInfoWrapper = styled.div`
     .links-container {
       margin: 10px 0;
       .icon {
-        margin: 0 5px;
+        margin: 0 10px;
         font-size: 20px;
       }
     }
