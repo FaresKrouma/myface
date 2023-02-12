@@ -121,6 +121,7 @@ const LeftBarWrapper = styled.aside`
   padding: 15px 20px;
   height: calc(100vh - 50px);
   overflow: scroll;
+  transition: 0.4s ease;
   @media ${(p) => p.theme.media.mobile} {
     display: none;
   }

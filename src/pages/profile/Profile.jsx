@@ -18,6 +18,7 @@ const ProfileWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.4s ease;
   gap: 15px;
   padding: 15px 20px;
   background-color: ${(p) => p.theme.backgroundSoft};

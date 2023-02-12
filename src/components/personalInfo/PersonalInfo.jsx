@@ -44,6 +44,7 @@ const PersonalInfoWrapper = styled.div`
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  transition: 0.4s ease;
   color: ${(p) => p.theme.text};
   align-items: center;
   /* justify-content: center; */

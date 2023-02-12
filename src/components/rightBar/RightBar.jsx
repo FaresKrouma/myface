@@ -82,6 +82,7 @@ const RightBarWrapper = styled.aside`
   padding: 1rem 1rem 0 0;
   flex: 2.25;
   position: sticky;
+  transition: 0.4s ease;
   right: 0;
   top: 50px;
   height: calc(100vh - 50px);
@@ -94,6 +95,7 @@ const RightBarWrapper = styled.aside`
     box-shadow: 0 0 10px 2px ${(p) => p.theme.shadow};
     display: flex;
     padding: 15px;
+    transition: 0.4s ease;
     flex-direction: column;
     gap: 10px;
     background-color: ${(p) => p.theme.backgroundColor};

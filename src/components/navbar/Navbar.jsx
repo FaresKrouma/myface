@@ -44,6 +44,7 @@ export default Navbar;
 
 const NavbarWrapper = styled.nav`
   display: flex;
+  transition: 0.4s ease;
   position: sticky;
   top: 0;
   background-color: ${(p) => p.theme.backgroundColor};

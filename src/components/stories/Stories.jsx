@@ -80,14 +80,14 @@ const StoriesWrapper = styled.div`
     color: white;
     background-color: black;
     border-radius: 12px;
-    margin: 5px 0;
+    margin: 5px 2px;
     @media ${(p) => p.theme.media.ipad} {
       height: 140px;
       min-width: 110px;
     }
     @media ${(p) => p.theme.media.mobile} {
-      height: 60px;
-      min-width: 60px;
+      height: 90px;
+      min-width: 90px;
       border-radius: 50%;
     }
   }

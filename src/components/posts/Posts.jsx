@@ -17,5 +17,8 @@ const PostsWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
+  @media ${(p) => p.theme.media.ipad} {
+    gap: 1rem;
+  }
 `;

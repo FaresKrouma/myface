@@ -52,6 +52,7 @@ const HomeWrapper = styled.main`
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  transition: 0.4s ease;
   padding: 15px 20px;
   background-color: ${(p) => p.theme.backgroundSoft};
   overflow: hidden;

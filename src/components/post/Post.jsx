@@ -65,6 +65,7 @@ const PostWrapper = styled.div`
   border-radius: 12px;
   width: 100%;
   display: flex;
+  transition: 0.4s ease;
   flex-direction: column;
   gap: 15px;
   padding: 15px;
@@ -124,7 +125,7 @@ const PostWrapper = styled.div`
       cursor: pointer;
       align-items: center;
       gap: 5px;
-      font-size: 12px;
+      font-size: 10px;
       @media ${(p) => p.theme.media.mobile} {
         font-size: 10px;
       }
@@ -147,17 +148,17 @@ const PostWrapper = styled.div`
       flex: initial;
     }
     input {
-      padding: 8px 10px;
+      padding: 5px 8px;
       flex: 5;
       border: 1px solid ${(p) => p.theme.border};
       border-radius: 5px;
     }
     button {
-      font-size: 14px;
+      font-size: 10px;
       cursor: pointer;
       font-weight: bold;
       border: none;
-      padding: 8px 10px;
+      padding: 6px 8px;
       border-radius: 5px;
       background-color: #29cac5;
       color: black;
