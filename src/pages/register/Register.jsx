@@ -73,6 +73,9 @@ const RegisterPage = styled.div`
           border-bottom: 1px lightgray solid;
           padding: 10px;
           border-radius: 5px;
+          :focus {
+            outline: none;
+          }
         }
         button {
           margin-top: 20px;

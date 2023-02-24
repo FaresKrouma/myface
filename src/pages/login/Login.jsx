@@ -122,6 +122,9 @@ const LoginPage = styled.div`
           border: none;
           border-bottom: 1px lightgray solid;
           padding: 10px;
+          :focus {
+            outline: none;
+          }
         }
         button {
           padding: 10px 0px;

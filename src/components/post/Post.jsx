@@ -119,13 +119,13 @@ const PostWrapper = styled.div`
   .interactions {
     display: flex;
     gap: 30px;
-    padding: 0 10px;
+    padding: 0 5px;
     span {
       display: flex;
       cursor: pointer;
       align-items: center;
       gap: 5px;
-      font-size: 10px;
+      font-size: 11px;
       @media ${(p) => p.theme.media.mobile} {
         font-size: 10px;
       }
@@ -148,10 +148,13 @@ const PostWrapper = styled.div`
       flex: initial;
     }
     input {
-      padding: 5px 8px;
+      padding: 6px 8px;
       flex: 5;
       border: 1px solid ${(p) => p.theme.border};
       border-radius: 5px;
+      :focus {
+        outline: none;
+      }
     }
     button {
       font-size: 10px;
