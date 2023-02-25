@@ -1,5 +1,5 @@
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import pp from "../assets/pp.jpeg";
 
 export const AuthContext = createContext();
 
@@ -8,9 +8,19 @@ export function AuthContextProvider({ children }) {
     JSON.parse(localStorage.getItem("user")) || null
   );
 
-  const login = () => {
-    setCurrentUser({ id: "1", name: "ahmad issa", img: { pp } });
-    console.log("clicked");
+  const login = async (userInput) => {
+    try {
+      const res = await axios.post(
+        "http://localhost:3001/auth/login",
+        userInput,
+        {
+          withCredentials: true,
+        }
+      );
+      setCurrentUser(res.data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {

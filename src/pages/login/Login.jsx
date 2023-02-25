@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { AuthContext } from "../../context/authContext";
 import image from "./kelsey-chance-CutTQTt2HyI-unsplash.jpg";
@@ -8,6 +8,8 @@ const Login = () => {
   const { login } = useContext(AuthContext);
   const [loginCredintals, setLoginCredintals] = useState(null);
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setLoginCredintals((prev) => ({
       ...prev,
@@ -15,8 +17,14 @@ const Login = () => {
     }));
   };
 
-  const handleLogin = () => {
-    login();
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await login(loginCredintals);
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -38,12 +46,12 @@ const Login = () => {
         </div>
         <div className="right">
           <h2>Login</h2>
-          <form action="">
+          <form onSubmit={handleLogin}>
             <input
               onChange={handleChange}
               type="text"
-              placeholder="username"
-              name="username"
+              placeholder="email"
+              name="email"
             />
             <input
               onChange={handleChange}
@@ -51,6 +59,7 @@ const Login = () => {
               placeholder="password"
               name="password"
             />
+            <small className="error">err</small>
             <Link to="/">
               <button onClick={handleLogin}>Login</button>
             </Link>
@@ -143,6 +152,9 @@ const LoginPage = styled.div`
           :focus {
             outline: none;
           }
+        }
+        .error {
+          font-size: 10px;
         }
         button {
           padding: 10px 0px;

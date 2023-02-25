@@ -33,7 +33,7 @@ const Navbar = () => {
         <FiMail className="icon" />
         <MdNotificationsNone className="icon" />
         <div className="profile-thumb">
-          <img src={currentUser.img.pp} alt="profile pic" />
+          <img src="" alt="profile pic" />
           <span>{currentUser.name}</span>
         </div>
       </div>

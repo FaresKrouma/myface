@@ -21,8 +21,7 @@ const LeftBar = () => {
     <LeftBarWrapper>
       <div className="section">
         <div className="user item">
-          <img src={currentUser.img.pp} alt="" />{" "}
-          <span> {currentUser.name}</span>
+          <img src="" alt="" /> <span> {currentUser.name}</span>
         </div>
         <div className="item">
           <img src={friends} alt="" /> <span> Friends</span>
