@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { AuthContext } from "../../context/authContext";
@@ -6,6 +6,14 @@ import image from "./kelsey-chance-CutTQTt2HyI-unsplash.jpg";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
+  const [loginCredintals, setLoginCredintals] = useState(null);
+
+  const handleChange = (e) => {
+    setLoginCredintals((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   const handleLogin = () => {
     login();
@@ -31,8 +39,18 @@ const Login = () => {
         <div className="right">
           <h2>Login</h2>
           <form action="">
-            <input type="text" placeholder="username" id="" />
-            <input type="text" placeholder="password" id="" />
+            <input
+              onChange={handleChange}
+              type="text"
+              placeholder="username"
+              name="username"
+            />
+            <input
+              onChange={handleChange}
+              type="password"
+              placeholder="password"
+              name="password"
+            />
             <Link to="/">
               <button onClick={handleLogin}>Login</button>
             </Link>

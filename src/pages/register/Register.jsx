@@ -1,19 +1,59 @@
+import axios from "axios";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import image from "./omar-lopez-rwF_pJRWhAI-unsplash.jpg";
 
 const Register = () => {
+  const [newUserDetails, setNewUserDetails] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:3001/auth/register", newUserDetails);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleChange = (e) => {
+    setNewUserDetails((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <RegisterPage>
       <div className="card">
         <div className="left">
           <h2>Register</h2>
           <form action="">
-            <input type="text" placeholder="name" />
-            <input type="email" placeholder="e-mail" />
-            <input type="password" placeholder="password" />
-            <input type="text" placeholder="display name" />
-            <button>Register</button>
+            <input
+              onChange={handleChange}
+              name="name"
+              type="text"
+              placeholder="name"
+            />
+            <input
+              onChange={handleChange}
+              name="email"
+              type="email"
+              placeholder="e-mail"
+            />
+            <input
+              onChange={handleChange}
+              name="password"
+              type="password"
+              placeholder="password"
+            />
+            <input
+              onChange={handleChange}
+              name="username"
+              type="text"
+              placeholder="username"
+            />
+            <button onClick={handleSubmit}>Register</button>
           </form>
         </div>
         <div className="right">
