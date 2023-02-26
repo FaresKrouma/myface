@@ -34,24 +34,28 @@ const Register = () => {
               name="name"
               type="text"
               placeholder="name"
+              autoComplete="off"
             />
             <input
               onChange={handleChange}
               name="email"
               type="email"
               placeholder="e-mail"
+              autoComplete="off"
             />
             <input
               onChange={handleChange}
               name="password"
               type="password"
               placeholder="password"
+              autoComplete="off"
             />
             <input
               onChange={handleChange}
               name="username"
               type="text"
               placeholder="username"
+              autoComplete="off"
             />
             <button onClick={handleSubmit}>Register</button>
           </form>

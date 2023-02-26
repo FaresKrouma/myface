@@ -52,12 +52,14 @@ const Login = () => {
               type="text"
               placeholder="email"
               name="email"
+              autoComplete="off"
             />
             <input
               onChange={handleChange}
               type="password"
               placeholder="password"
               name="password"
+              autoComplete="off"
             />
             <small className="error">err</small>
             <Link to="/">

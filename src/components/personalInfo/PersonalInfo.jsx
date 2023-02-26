@@ -106,18 +106,21 @@ const PersonalInfoWrapper = styled.div`
         margin: 0 8px;
         font-size: 30px;
         transition: 0.15s ease;
-        &.inst:hover {
-          color: #ff491c;
+        &:hover {
+          transform: scale(1.15);
         }
-        &.fb:hover {
-          color: #4267b2;
-        }
-        &.twitter:hover {
-          color: #fabb32;
-        }
-        &.li:hover {
-          color: #0ca9f2;
-        }
+      }
+      .icon.inst {
+        color: #ff491c;
+      }
+      .icon.fb {
+        color: #4267b2;
+      }
+      .icon.twitter {
+        color: #ffd375;
+      }
+      .icon.li {
+        color: #0ca9f2;
       }
     }
     .buttons-container {
